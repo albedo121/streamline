@@ -2,7 +2,7 @@
 
 This is a PoC application. It is a simple web server built with Express that allows users to upload video files and converts them into HLS (HTTP Live Streaming) format.
 
-## Key Features
+## Work flow of the application
 
 1. **Video Upload**:
    - Users can upload video files via a POST request to the `/upload` endpoint. The application uses Multer middleware to handle file uploads.
@@ -79,12 +79,18 @@ Follow these steps to set up and use the Video Upload and HLS Conversion Applica
   - The URL of the generated HLS stream.
   - The unique trailer ID for the uploaded video.
 
-### Accessing the HLS Stream
+### Testing the HLS Stream using Video.js library
 
-- You can access the HLS stream using the URL provided in the response. This URL will point to the `index.m3u8` file that you can use for playback in compatible video players.
+1. You can access the HLS stream using the URL provided in the response. This URL will point to the `index.m3u8` file that you can use for playback in compatible video players.
+2. Navigate to the 'frontend' directory and open the app.jsx file.
+3. Add the url received from json response under const 'videoLink'.
+4. Run the react application using npm (Make sure u are in frontend directory)
+   ```bash
+   npm run dev
+   ```
+5. Click on the 'http://localhost:5173/' link in console which will open the video player in browser.
+6. Click on play button. Under netowrk tab you can see the HLS stream response named 'segmentxxx'
 
-### Stopping the Server
 
-- To stop the server, simply terminate the process in your terminal (usually by pressing `Ctrl + C`).
 
-```
+

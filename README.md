@@ -66,7 +66,7 @@ Follow these steps to set up and use the Video Upload and HLS Conversion Applica
    - **Method**: POST
    - **Body**: Form-data
      - Key: `file` (this should be the name of the file input in the code)
-     - Value: Choose the video file you want to upload.
+     - Value: Choose the video file you want to upload. A sample video file is present in test-video directory.
 
 3. **Send the Request**:
    - After setting up the request, send it. The server will process the uploaded video.
@@ -89,8 +89,4 @@ Follow these steps to set up and use the Video Upload and HLS Conversion Applica
    npm run dev
    ```
 5. Click on the 'http://localhost:5173/' link in console which will open the video player in browser.
-6. Click on play button. Under netowrk tab you can see the HLS stream response named 'segmentxxx'
-
-
-
-
+6. Click on play button. Under netowrk tab you can see the HLS stream responses named 'segmentxxx'
